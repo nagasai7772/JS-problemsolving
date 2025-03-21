@@ -43,3 +43,33 @@ if (str.length % 2 == 0) {
 } else {
   console.log("The string Length Must be Even ");
 }
+// Find the Longest Word
+
+// Problem: Write a function to find the longest word in a string.
+// Testcase 1:
+// Input: "The quick brown fox jumps over the lazy dog"
+// Output: "jumps"
+// // 
+
+let str="The quick brown fox jumps over the lazy dog"
+let currentword=''
+let longestword=''
+let maxlength=0
+for(i=0;i<str.length;i++)
+{
+  if(str[i]!=undefined&&str[i]!=' ')
+  {
+    currentword+=str[i]
+  }
+  else
+  {
+    if(currentword.length>maxlength)
+    {
+      maxlength=currentword.length
+      longestword=currentword
+    }
+    currentword=''
+  }
+}
+
+console.log('The longestword in a string is : ',longestword)
