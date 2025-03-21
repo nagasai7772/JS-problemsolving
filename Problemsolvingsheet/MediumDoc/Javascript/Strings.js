@@ -10,7 +10,7 @@
 // Testcase1	:  mars
 // Output     	:  false
 
-let str = "logicc";
+let str = "rebels";
 let part1 = "";
 let part2 = "";
 let vowels = "aeiou";
@@ -164,7 +164,29 @@ count=0
 }
 console.log('The Non-repeating first character in a string is :', temp)
 
+// Reverse Words in a String
 
+// Problem: Write a function to reverse the order of words in a given string.
+// Testcase 1:
+// Input: "hello world"
+// Output: "world hello"
+let str='hello world'
+let reverse_str=''
+let word=''
+for(i=str.length-1;i>=0;i--)
+{
+  if(str[i]!=' ')
+  {
+    word=str[i]+word
+  }
+  else
+  {
+    reverse_str+=word+' '
+    word=''
+  }
+}
+reverse_str+=word
+console.log('The reversed string is :',reverse_str)
 
 
 
