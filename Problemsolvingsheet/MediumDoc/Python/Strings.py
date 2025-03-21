@@ -148,3 +148,25 @@ for i in range(len(str)-1,-1,-1):
     
 reversed_str+=word
 print('The reversed string is :',reversed_str)
+// Find the Longest Palindromic Substring
+
+// Problem: Write a function to find the longest palindromic substring in a given string.
+// Testcase 1:
+// Input: "babad"
+// Output: "bab"
+str='babad'
+longeststr=''
+for i in range(len(str)):
+  emp=''
+  for j in range(i,len(str)):
+    emp+=str[j]
+    if len(emp)>=2:
+      rev=''
+      for k in range(len(emp)-1,-1,-1):
+        rev+=emp[k]
+        
+      if rev==emp and len(emp)>len(longeststr):
+        longeststr=emp
+        
+    
+print(longeststr)
