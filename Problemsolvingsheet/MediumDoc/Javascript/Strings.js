@@ -130,7 +130,39 @@ else
 {
   console.log('Not Anagrams')
 }
+// Find the First Non-Repeating Character
 
+// Problem: Write a function to find the first non-repeating character in a string.
+// Testcase 1:
+// Input: "swiss"
+// Output: 'w'
+let str='swiss'
+let emp=''
+for(i of str)
+{
+  if(!emp.includes(i))
+  {
+    emp+=i
+  }
+}
+temp=''
+for(i of emp)
+{
+count=0
+  for(j of str)
+  {
+    if(i==j)
+    {
+      count++
+    }
+  }
+  if(count==1)
+  {
+    temp+=i
+    break
+  }
+}
+console.log('The Non-repeating first character in a string is :', temp)
 
 
 
