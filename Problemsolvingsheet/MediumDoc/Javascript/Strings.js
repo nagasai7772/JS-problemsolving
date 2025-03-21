@@ -73,3 +73,78 @@ for(i=0;i<str.length;i++)
 }
 
 console.log('The longestword in a string is : ',longestword)
+// Check for Anagrams
+
+// Problem: Write a function to check if two strings are anagrams of each other.
+// Testcase 1:
+// Input: "listen", "silent"
+let str1='hello';
+let str2='ellop';
+if(str1.length==str2.length)
+{
+    emp=''
+  for(i of str1)
+  {
+    if(!emp.includes(i))
+    {
+      emp+=i
+    }
+  }
+  is_anagram=true
+  for(i of emp)
+  {
+    count1=0
+    count2=0
+    for(j of str1)
+    {
+      if(i==j)
+      {
+        count1++
+      }
+    }
+    for(k of str2)
+    {
+      if(i==k)
+      {
+        count2++
+      }
+    }
+      
+    if(count1!==count2)
+    {
+      is_anagram=false
+      break
+    }
+  }
+  if(is_anagram)
+  {
+    console.log('Both are Anagrams')
+  }
+  else
+  {
+    console.log('characters mismatch')
+  }
+  
+}
+else
+{
+  console.log('Not Anagrams')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
