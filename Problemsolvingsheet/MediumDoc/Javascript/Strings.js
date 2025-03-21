@@ -187,7 +187,36 @@ for(i=str.length-1;i>=0;i--)
 }
 reverse_str+=word
 console.log('The reversed string is :',reverse_str)
+// Find the Longest Palindromic Substring
 
+// Problem: Write a function to find the longest palindromic substring in a given string.
+// Testcase 1:
+// Input: "babad"
+// Output: "bab"
+
+let str='babad'
+let longeststr=''
+for(i=0;i<str.length;i++)
+{
+  emp=''
+  for(j=i;j<str.length;j++)
+  {
+    emp+=str[j]
+    if(emp.length>=2)
+    {
+      rev=''
+      for(k=emp.length-1;k>=0;k--)
+      {
+        rev+=emp[k]
+      }
+      if(emp==rev&&emp.length>longeststr.length)
+      {
+        longeststr=emp
+      }
+    }
+  }
+}
+console.log('The longest palindromic substring :',longeststr)
 
 
 
