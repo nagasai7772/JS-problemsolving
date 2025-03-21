@@ -130,4 +130,21 @@ for i in emp:
 
 print('The Non-repeating first character in a string is:', temp)
 
+// Reverse Words in a String
 
+// Problem: Write a function to reverse the order of words in a given string.
+// Testcase 1:
+// Input: "hello world"
+// Output: "world hello"
+str='hello world'
+word=''
+reversed_str=''
+for i in range(len(str)-1,-1,-1):
+  if str[i]!=' ':
+    word=str[i]+word
+  else:
+    reversed_str+=word+' '
+    word=''
+    
+reversed_str+=word
+print('The reversed string is :',reversed_str)
