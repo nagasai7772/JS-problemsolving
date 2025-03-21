@@ -106,5 +106,28 @@ if len(str1) == len(str2):
         print('Characters mismatch')
 else:
     print('Not Anagrams')
+// Find the First Non-Repeating Character
+
+// Problem: Write a function to find the first non-repeating character in a string.
+// Testcase 1:
+// Input: "swiss"
+// Output: 'w'
+str = 'swiss'
+emp = ''
+for i in str:
+    if i not in emp:
+        emp += i
+
+temp = ''
+for i in emp:
+    count = 0
+    for j in str:
+        if i == j:
+            count += 1
+    if count == 1:
+        temp += i
+        break
+
+print('The Non-repeating first character in a string is:', temp)
 
 
