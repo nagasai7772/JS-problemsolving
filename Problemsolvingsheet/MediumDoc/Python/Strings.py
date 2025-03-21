@@ -43,3 +43,29 @@ if len(str_val) % 2 == 0:
 
 else:
     print('The string length must be even')
+// Find the Longest Word
+
+// Problem: Write a function to find the longest word in a string.
+// Testcase 1:
+// Input: "The quick brown fox jumps over the lazy dog"
+// Output: "jumps"
+str_val = "The quick brown fox jumps over the lazy dog"
+currentword = ''
+longestword = ''
+maxlength = 0
+
+for i in range(len(str_val)):
+    if str_val[i] != ' ':
+        currentword += str_val[i]
+    else:
+        if len(currentword) > maxlength:
+            maxlength = len(currentword)
+            longestword = currentword
+        currentword = ''  # Reset current word
+
+# Check the last word (since there's no trailing space)
+if len(currentword) > maxlength:
+    longestword = currentword
+
+print("The longest word in the string is:", longestword)
+
