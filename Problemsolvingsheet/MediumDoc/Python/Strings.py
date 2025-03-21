@@ -68,4 +68,43 @@ if len(currentword) > maxlength:
     longestword = currentword
 
 print("The longest word in the string is:", longestword)
+// Check for Anagrams
+
+// Problem: Write a function to check if two strings are anagrams of each other.
+// Testcase 1:
+// Input: "listen", "silent"
+str1 = 'listen'
+str2 = 'silent'
+
+if len(str1) == len(str2):
+    emp = ''
+    for i in str1:
+        if i not in emp:
+            emp += i
+
+    is_anagram = True
+
+    for i in emp:
+        count1 = 0
+        count2 = 0
+
+        for j in str1:
+            if i == j:
+                count1 += 1
+        
+        for k in str2:
+            if i == k:
+                count2 += 1
+
+        if count1 != count2:
+            is_anagram = False
+            break
+
+    if is_anagram:
+        print('Both are Anagrams')
+    else:
+        print('Characters mismatch')
+else:
+    print('Not Anagrams')
+
 
