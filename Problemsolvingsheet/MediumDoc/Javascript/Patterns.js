@@ -117,11 +117,11 @@ for(i=1;i<=row;i++)
 
 // Testcase1	:  Enter number of rows: 4
 // Output     	: 
++1
+++12
++++123
+++++1234
 
-// +1
-// ++2
-// +++3
-// ++++4
 let row=4
 for(i=1;i<=row;i++)
 {
