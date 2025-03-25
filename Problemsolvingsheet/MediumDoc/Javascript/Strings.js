@@ -242,7 +242,41 @@ for(i=0;i<str.length;i++)
 }
 console.log('The count of repeated characters in a string is :',countofstrings)
 
+// // Find All Permutations of a String
 
+// // Problem: Write a function to find all permutations of a given string.
+// // Testcase 1:
+// // Input: "abc"
+// // Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+let str='abc'
+let arr=[]
+for(i of str)
+{
+  for(j of str)
+  {
+    if(i==j)
+    {
+      
+    }
+    else
+    {
+      arr.push(i+j)
+    }
+  }
+}
+let permarr=[]
+for(i of str)
+{
+  for(j of arr)
+  {
+    if(!j.includes(i))
+    {
+      permarr.push(i+j)
+    }
+  }
+}
+console.log('The max possible permutations in string ',permarr)
 
 
 
