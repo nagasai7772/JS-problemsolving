@@ -218,7 +218,29 @@ for(i=0;i<str.length;i++)
 }
 console.log('The longest palindromic substring :',longeststr)
 
+// // String Compression
+// // `
+// // Problem: Write a function to perform basic string compression using the counts of repeated characters.
+// // Testcase 1:
+// // Input: "aabcccccaaa"
+// // Output: "a2b1c5a3"
 
+let str='aabcccccaaa'
+let count=1
+let countofstrings=''
+for(i=0;i<str.length;i++)
+{
+  if(str[i]==str[i+1])
+  {
+    count++
+  }
+  else
+  {
+    countofstrings+=str[i]+count
+    count=1
+  }
+}
+console.log('The count of repeated characters in a string is :',countofstrings)
 
 
 
