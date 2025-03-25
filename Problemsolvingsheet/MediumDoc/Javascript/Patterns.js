@@ -40,3 +40,27 @@ for(i=1;i<=rows;i++)
   }
   console.log(s)
 }
+
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// 1 1
+// 1 2 3
+// 1 2 3 6
+// 1 2 3 4 10
+
+
+let rows=4;
+for(i=1;i<=rows;i++)
+{
+  s=''
+  sum=0
+  for(j=1;j<=i;j++)
+  {
+    sum+=j
+    s+=j+' '
+  }
+  console.log(s+sum)
+}
