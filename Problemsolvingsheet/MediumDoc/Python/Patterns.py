@@ -52,3 +52,21 @@ for i in range(1,rows+1):
     sum=sum+j
     s+=str(j)+' '
   print(s+str(sum))  
+# // Write a program that takes number of rows as input and print below respective pattern.
+
+# // Testcase1	:  Enter number of rows: 3
+# // Output     	: 
+
+# //   1
+# // 1   2
+# // 1  2  3
+
+row=3
+for i in range(1,row+1):
+  s=''
+  for j in range(row-i):
+    s+=' '
+    
+  for k in range(1,i+1):
+    s+=str(k)+' '
+  print(s)  
