@@ -193,3 +193,28 @@ for i in range(len(name) - 1):
 countofstrings += name[-1] + str(count)
 
 print('The count of repeated characters in a string is:', countofstrings)
+# // // Find All Permutations of a String
+
+# // // Problem: Write a function to find all permutations of a given string.
+# // // Testcase 1:
+# // // Input: "abc"
+# // // Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+str='abc'
+arr=[]
+for i in range(0,len(str),1):
+  for j in range(0,len(str),1):
+    if str[i]==str[j]:
+      pass
+    else:
+      arr.append(str[i]+str[j])
+
+permarr=[]
+for i in range(0,len(arr),1):
+  for j in range(0,len(str),1):
+    if str[j] not in arr[i]:
+      permarr.append(str[j]+arr[i])
+      permarr.sort()
+      
+      
+print(permarr)
