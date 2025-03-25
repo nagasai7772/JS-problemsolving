@@ -87,3 +87,27 @@ for(i=1;i<=rows;i++)
   }
   console.log(s)
 }
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// 1+
+// 12++
+// 123+++
+// 1234++++
+
+let row=4
+for(i=1;i<=row;i++)
+{
+  s=''
+  for(j=1;j<=i;j++)
+  {
+    s+=j
+  }
+  for(k=1;k<=i;k++)
+  {
+    s+='+'
+  }
+  console.log(s)
+}
