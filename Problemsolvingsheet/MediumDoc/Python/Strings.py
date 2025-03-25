@@ -170,3 +170,26 @@ for i in range(len(str)):
         
     
 print(longeststr)
+// // String Compression
+// // `
+// // Problem: Write a function to perform basic string compression using the counts of repeated characters.
+// // Testcase 1:
+// // Input: "aabcccccaaa"
+// // Output: "a2b1c5a3"
+
+
+name = 'aabcccccaaa'
+countofstrings = ''
+count = 1
+
+for i in range(len(name) - 1): 
+    if name[i] == name[i + 1]: 
+        count += 1
+    else:
+        countofstrings += name[i] + str(count) 
+        count = 1  
+
+
+countofstrings += name[-1] + str(count)
+
+print('The count of repeated characters in a string is:', countofstrings)
