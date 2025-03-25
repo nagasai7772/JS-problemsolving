@@ -70,3 +70,21 @@ for i in range(1,row+1):
   for k in range(1,i+1):
     s+=str(k)+' '
   print(s)  
+  # // Write a program that takes number of rows as input and print below respective pattern.
+
+# // Testcase1	:  Enter number of rows: 4
+# // Output     	: 
+
+# // 1+
+# // 12++
+# // 123+++
+# // 1234++++
+
+row=4
+for i in range(1,row+1):
+  s=''
+  for j in range(1,i+1):
+    s+=str(j)
+  for k in range(1,i+1):
+    s+='+'
+  print(s)  
