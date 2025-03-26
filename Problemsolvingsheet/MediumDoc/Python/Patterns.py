@@ -168,3 +168,55 @@ for i in range (0,row):
     s+=code+' '
     alpha+=1
   print(s)  
+  # // Write a program that takes number of rows as input and print below respective pattern.
+
+# // Testcase1	:  Enter number of rows: 4
+# // Output     	: 
+
+# // A1
+# // AB12
+# // ABC123
+# // ABCD1234
+
+row=4
+for i in range(1,row+1):
+  s=''
+  alpha=65
+  for j in range(1,i+1):
+    code=chr(alpha)
+    s+=code
+    alpha+=1
+  for k in range(1,i+1):
+    s+=str(k)
+  print(s)  
+  
+#   / Write a program that takes number of rows as input and print below respective pattern.
+
+# // Testcase1	:  Enter number of rows: 4
+# // Output     	: 
+
+# // A
+# // ab
+# // ABC
+# // abcd
+
+
+row=4
+for i in range(0,row):
+  s=''
+  alpha1=65
+  alpha2=97
+  for j in range(0,i+1):
+    if i%2==0:
+      code=chr(alpha1)
+      s+=code
+      alpha1+=1
+    else:
+      code=chr(alpha2)
+      s+=code
+      alpha2+=1
+  print(s)  
+      
+      
+      
+
