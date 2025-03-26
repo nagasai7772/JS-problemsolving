@@ -129,3 +129,23 @@ for i in range(1,row+1):
   s+=str(sum)
   print(s)
   
+
+# // Write a program that takes number of rows as input and print below respective pattern.
+
+# // Testcase1	:  Enter number of rows: 4
+# // Output     	: 
+
+# // A 
+# // AB
+# // ABC
+# // ABCD
+
+row=4
+for i in range(0,row):
+  s=''
+  alpha=65
+  for j in range(0,i+1):
+    code=chr(alpha)
+    s+=code
+    alpha+=1
+  print(s)  
