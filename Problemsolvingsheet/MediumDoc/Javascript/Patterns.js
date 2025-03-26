@@ -162,3 +162,27 @@ for(i=1;i<=row;i++)
   s+=sum
   console.log(s)
 }
+
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// A 
+// AB
+// ABC
+// ABCD
+
+let row=4
+for(i=1;i<=row;i++)
+{
+  let alpha=65
+  s=''
+  for(j=1;j<=i;j++)
+  {
+    code=String.fromCharCode(alpha)
+    s+=code
+    alpha++
+  }
+  console.log(s)
+}
