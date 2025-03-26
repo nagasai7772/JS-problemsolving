@@ -186,3 +186,29 @@ for(i=1;i<=row;i++)
   }
   console.log(s)
 }
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 3
+// Output     	: 
+
+//   A
+// A  B
+// A  B  C
+
+let row=3
+for(i=0;i<row;i++)
+{
+  s=''
+  alpha=65
+  for(sp=0;sp<row-i;sp++)
+  {
+    s+=' '
+  }
+  for(j=0;j<=i;j++)
+  {
+    code=String.fromCharCode(alpha)
+    s+=code+' '
+    alpha++
+  }
+  console.log(s)
+}
