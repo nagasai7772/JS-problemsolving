@@ -149,3 +149,22 @@ for i in range(0,row):
     s+=code
     alpha+=1
   print(s)  
+# // Write a program that takes number of rows as input and print below respective pattern.
+
+# // Testcase1	:  Enter number of rows: 3
+# // Output     	: 
+
+# //   A
+# // A  B
+# // A  B  C
+row=3
+for i in range (0,row):
+  s=''
+  alpha=65
+  for j in range (row-i):
+    s+=' '
+  for k in range(0,i+1):
+    code=chr(alpha)
+    s+=code+' '
+    alpha+=1
+  print(s)  
