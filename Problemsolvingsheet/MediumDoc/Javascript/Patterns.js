@@ -212,3 +212,32 @@ for(i=0;i<row;i++)
   }
   console.log(s)
 }
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// A1
+// AB12
+// ABC123
+// ABCD1234
+
+let row=4
+for(i=1;i<=row;i++)
+{
+  alpha=65
+  s=''
+  for(j=1;j<=i;j++)
+  {
+    code=String.fromCharCode(alpha)
+    s+=code+''
+    // s+=j
+    alpha++
+    
+  }
+  for(k=1;k<=i;k++)
+  {
+    s+=k
+  }
+  console.log(s)
+}
