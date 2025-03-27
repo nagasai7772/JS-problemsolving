@@ -62,7 +62,38 @@ for i in range(0,len(arr)):
 print(secmax,max)  
 product=max*secmax
 print('The product of elements in array',product)
-  
+  # // Find the First Duplicate
+
+# // Problem: Write a function to return the first duplicate value in an array.
+# // Testcase 1:
+# // Input: [2, 1, 3, 5, 3, 2]
+# // Output: 3
+
+# arr=[2, 1, 3, 5, 3, 2]
+# emp=0
+# for i in range(len(arr)):
+#   for j in range(i+1,len(arr)):
+#     if arr[i]==arr[j]:
+#       emp=arr[i]
+      
+      
+# print('The first duplicate in array is',emp)      
+
+# // Pair Sum
+
+# // Problem: Write a function to find all pairs in an array whose sum is equal to a given target.
+# // Testcase 1:
+# // Input: [2, 4, 3, 5, 7, 8, 9], 7
+# // Output: [[4, 3], [2, 5]]
+
+arr=[2, 4, 3, 5, 7, 8, 9]
+target=7
+emp=[]
+for i in range(len(arr)):
+  for j in range(i+1,len(arr)):
+    if arr[i]+arr[j]==target:
+      emp.append([arr[i],arr[j]])
+print(emp)  
   
 
 
