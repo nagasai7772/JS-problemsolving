@@ -210,7 +210,28 @@ for i in range(len(arr)):
       peak=arr[i]
       
 print('The peak element in list is ',peak)    
+# Write a program that takes array of numbers are input, print the second duplicate number and it’s occurrence.
 
+# Testcase1	:  [ 64, 1, 2, 7, 79, 7, 7, 1, 22]
+# Output     	:  Second duplicate number is 7 and it is occurred 3 times
+# Explanation	: In the given array [ 64, 1, 2, 7, 79, 7, 7, 1, 22],
+# the second duplicate number is 7 and it is occurred for 3 times.
+
+arr=[ 64, 1, 2, 7, 79, 7, 7, 1, 22]
+maxcount=0
+firstDup=0
+secondDup=0
+for i in range(len(arr)):
+  count=1
+  for j in range(i+1,len(arr)):
+    if arr[i]==arr[j]:
+      count+=1
+      secondDup=firstDup
+      firstDup=arr[i]
+  if count>maxcount:
+    maxcount=count
+
+print('The second duplicate num in array is:',secondDup,'occurred:',maxcount,"times")    
 
 
 
