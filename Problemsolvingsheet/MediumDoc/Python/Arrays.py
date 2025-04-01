@@ -157,7 +157,75 @@ for i in range(len(arr)):
 print(count,'numbers presented in list')  
   
   
-  
+  # // Convert the given Input Empty String into the given Output
+#   //   Testcase 1:
+#   //   Input : [ ]
+#   //   Output : [[1,2,3][4,5,6][7,8,9]]
+
+arr=[]
+num=1
+length=3
+for i in range(length):
+  emp=[]
+  for j in range(length):
+    emp.append(num)
+    num+=1
+  arr.append(emp)
+print(arr)
+
+# // Flatten a Nested Array
+
+# // Problem: Write a function to flatten a nested array into a single array.
+# // Testcase 1:Improvements :  Very slow in improving
+
+# // Target date for completion : 
+
+# // Input: [1, [2, [3, [4]], 5]]
+# // Output: [1, 2, 3, 4, 5]
+
+arr = [1, [2, [3, [4]], 5]]
+
+def flattenarr(arr):
+    resultarr = []
+    for i in arr:
+        if isinstance(i, list): 
+            resultarr.extend(flattenarr(i))  
+        else:
+            resultarr.append(i)
+    return resultarr
+
+print(flattenarr(arr))  
+
+
+#   // Problem: Write a function to find a peak element in an array.
+# // An element is a peak if it is not smaller than its neighbours.
+# // Testcase 1:
+# // Input: [1, 3, 20, 4, 1, 0]
+# // Output: 20
+arr=[1, 3, 20, 4, 1, 0]
+peak=0
+for i in range(len(arr)):
+  if arr[i]>arr[i-1] and arr[i]>arr[i+1]:
+    if arr[i]>peak:
+      peak=arr[i]
+      
+print('The peak element in list is ',peak)    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
