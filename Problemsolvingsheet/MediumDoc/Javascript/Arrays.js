@@ -197,6 +197,101 @@ for(i of emp)
 
 console.log(res)
 
+// Write a program that takes array of numbers as input, among the numbers in array,
+// print the numbers which forms a prime number by adding one to it.
+// Print such numbers in the given array separated b spaces.
+
+// Testcase1	:  [ 7, 4, 7, 23, 10 ]
+// Output     	:  4 10
+
+let arr=[ 7, 4, 7, 23, 10 ]
+for(i of arr)
+{
+  fact=0
+  i+=1
+  for(j=2;j<i;j++)
+  {
+    if(i%j==0)
+    {
+      fact++
+    }
+  }
+  if(fact==0)
+  {
+    
+    i--
+    console.log(i,'is formed number')
+    
+  }
+}
+
+// Write a program that takes array of numbers as input and a number as second input.
+// Check the position of the factorial of the second input number in the given array.
+// Print the position of it. If the factorial of given second input number is not presented in the 
+// array then print factorial of  the number is not presented.
+
+// Testcase1	:  [ 61, 4, 6, 7, 120 , 10 ]
+let arr= [ 61, 4, 6, 7, 120 , 10 ]
+let fact=1
+let num=5
+for(i=1;i<=num;i++)
+{
+  fact*=i
+}
+is_found=false
+for(i in arr)
+{
+  if(arr[i]==fact)
+  {
+    is_found=true
+    break
+    
+  }
+  
+
+}
+if(is_found)
+  {
+    console.log('factorial:',fact,'is presented in  position NO:',i)
+  }
+  else
+  {
+    console.log(fact,'factorial Number is not present')
+//   }
+// Write a program that takes array of numbers as input, among the numbers in array, 
+//   check how many numbers starts with the same digit and ends with the same digits.
+//   Print the count of such kind of numbers in the given array.
+
+// Testcase1	:  [ 34, 88, 423, 121, 2382, 10]
+// Output     	:  3
+
+let arr=[ 34, 88, 423, 121, 2382, 10]
+let count=0
+
+for(num of arr)
+{
+  let strNum=num.toString()
+  let firstNum=strNum[0]
+  let lastNum=strNum[strNum.length-1]
+  if(firstNum==lastNum)
+  {
+    count++
+  }
+}
+console.log(count,'Numbers present in array')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
