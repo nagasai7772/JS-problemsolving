@@ -281,6 +281,78 @@ for(num of arr)
 console.log(count,'Numbers present in array')
 
 
+  // Convert the given Input Empty String into the given Output
+  //   Testcase 1:
+  //   Input : [ ]
+  //   Output : [[1,2,3][4,5,6][7,8,9]]
+
+let arr=[]
+length=3
+num=1
+
+for(i=0;i<length;i++)
+{
+  res=[]
+  for(j=0;j<length;j++)
+  {
+    res.push(num)
+    num++
+  }
+  arr.push(res)
+}
+console.log(arr)
+
+// Flatten a Nested Array
+
+// Problem: Write a function to flatten a nested array into a single array.
+// Testcase 1:Improvements :  Very slow in improving
+
+// Target date for completion : 
+
+// Input: [1, [2, [3, [4]], 5]]
+// Output: [1, 2, 3, 4, 5]
+
+let arr=[1, [2, [3, [4]], 5]]
+
+function flattenarr(arr)
+{
+  let result=[]
+  for(let i=0;i<arr.length;i++)
+  {
+    if(Array.isArray(arr[i]))
+    {
+      result.push(...flattenarr(arr[i]))
+    }
+    else
+    {
+      result.push(arr[i])
+    }
+  }
+  
+    return result
+}
+console.log(flattenarr(arr))
+// Find Peak Element
+
+// Problem: Write a function to find a peak element in an array.
+// An element is a peak if it is not smaller than its neighbours.
+// Testcase 1:
+// Input: [1, 3, 20, 4, 1, 0]
+// Output: 20
+
+let arr=[1, 3, 20, 4, 1, 0]
+peak=arr[0]
+for(i=0;i<arr.length;i++)
+{
+  if(arr[i]>arr[i-1]&&arr[i]>arr[i+1])
+  {
+    if(arr[i]>peak)
+    {
+      peak=arr[i]
+    }
+  }
+}
+console.log('The peak element in array is',peak)
 
 
 
