@@ -95,7 +95,92 @@ for i in range(len(arr)):
       emp.append([arr[i],arr[j]])
 print(emp)  
   
+# // Write a program that takes array of numbers as input, among the numbers in array,
+# // print the numbers which forms a prime number by adding one to it.
+# // Print such numbers in the given array separated b spaces.
 
+# // Testcase1	:  [ 7, 4, 7, 23, 10 ]
+# // Output     	:  4 10
+
+arr=[ 7, 4, 7, 23, 10 ]
+for i in range(len(arr)):
+  fact=0
+  arr[i]+=1
+  for j in range(2,arr[i]-1):
+    if arr[i]%j==0:
+      fact+=1
+  if fact==0:
+    arr[i]=arr[i]-1
+    print(arr[i],'is forms a prime number')
+  
+
+
+# // Write a program that takes array of numbers as input and a number as second input.
+# // Check the position of the factorial of the second input number in the given array.
+# // Print the position of it. If the factorial of given second input number is not presented in the 
+# // array then print factorial of  the number is not presented.
+
+# // Testcase1	:  [ 61, 4, 6, 7, 120 , 10 ]  
+
+fact=1
+arr=[ 61, 4, 6, 7, 120 , 10 ]  
+num=5
+for i in range(1,num+1):
+  fact=fact*i
+# print(fact)
+is_found=False
+for i in range(len(arr)):
+  if(arr[i]==fact):
+    is_found=True
+    break
+if(is_found):
+  print('factorial:',fact,'is presented in position',i)
+else:
+  print("factorial:",fact,'is Not presented in list')
+  
+# // Write a program that takes array of numbers as input, among the numbers in array, 
+# //   check how many numbers starts with the same digit and ends with the same digits.
+# //   Print the count of such kind of numbers in the given array.
+
+# // Testcase1	:  [ 34, 88, 423, 121, 2382, 10]
+# // Output     	:  3  
+  
+  
+arr=  [ 34, 88, 423, 121, 2382, 10]
+count=0
+for i in range(len(arr)):
+  strNum=str(arr[i])
+  firstNum=strNum[0]
+  lastNum=strNum[-1]
+  if firstNum==lastNum:
+    count+=1
+print(count,'numbers presented in list')  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
