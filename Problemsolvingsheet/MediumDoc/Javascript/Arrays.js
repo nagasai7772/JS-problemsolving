@@ -354,6 +354,91 @@ for(i=0;i<arr.length;i++)
 }
 console.log('The peak element in array is',peak)
 
+// Write a program that takes array of numbers are input, print the second duplicate number
+// and it’s occurrence.
+
+// Testcase1	:  [ 64, 1, 2, 7, 79, 7, 7, 1, 22]
+// Output     	:  Second duplicate number is 7 and it is occurred 3 times
+// Explanation	: In the given array [ 64, 1, 2, 7, 79, 7, 7, 1, 22], the second
+// duplicate number is 7 and it is occurred for 3 times.
+
+let arr=[ 64, 1, 2, 7, 79, 7, 7, 1, 22]
+let maxcount=0
+let firstDup=0
+let secDup=0
+for(i=0;i<arr.length;i++)
+{
+  count=1
+  for(j=i+1;j<arr.length;j++)
+  {
+    if(arr[i]==arr[j])
+    {
+      count++
+      secDup=firstDup
+      firstDup=arr[i]
+    }
+  }
+  if(count>maxcount)
+  {
+    maxcount=count
+  }
+}
+console.log('The second duplicate num in array is:',secDup,'occurred:',maxcount,"times")
+
+
+// Group Anagrams
+
+// Problem: Write a function to group anagrams from an array of strings.
+// Testcase 1:
+// Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+// Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
+
+
+let arr =["eat", "tea", "tan", "ate", "nat", "bat"]
+let anagramsStr=[]
+let checkout=[]
+
+for(i=0;i<arr.length;i++)
+{
+  if(!checkout.includes(arr[i]))
+  {
+    let temp=[arr[i]]
+    let str1=arr[i].split('').sort().join('')
+    // console.log(temp,str1)
+    for(j=i+1;j<arr.length;j++)
+    {
+      let str2=arr[j].split('').sort().join('')
+      if(str1==str2)
+      {
+        temp.push(arr[j])
+        checkout.push(arr[j])
+      }
+    }
+    anagramsStr.push(temp)
+  }
+  
+}
+
+
+console.log(anagramsStr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
