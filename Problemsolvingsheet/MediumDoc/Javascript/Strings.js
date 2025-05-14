@@ -283,6 +283,45 @@ console.log('The max possible permutations in string ',permarr)
 
 
 
+let str1 = 'abcde';
+let str2 = 'cdeab';
+let concatdtr=str1+str1
+let isrotate=false
+if(str1.length!=str2.length)
+{
+  console.log('Not A Rotational String')
+}
+else
+{
+  for(i=0;i<concatdtr.length-str2.length;i++)
+  {
+    ismatch=true
+    for(j=0;j<str2.length;j++)
+    {
+      if(concatdtr[i+j]!=str2[j])
+      {
+        ismatch=false
+        break
+      }
+    }
+    if(ismatch)
+    {
+      isrotate=true
+      break
+    }
+  }
+}
+if(isrotate)
+{
+  console.log(str2,' is a Rotational string of ',str1)
+}
+else
+{
+  console.log(str2,'is not a Rotational string',str1)
+}
+
+
+
 
 
 
