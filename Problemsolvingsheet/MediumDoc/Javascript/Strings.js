@@ -388,7 +388,33 @@ else
   console.log('both are isomorphic')
 }
 
+   //   Problem: Write a function to convert a Roman numeral string to an integer.
+// Testcase 1:
+// Input: "MCMXCIV"
+// Output: 1994
+// CODE:
+let roman={
+    "I":1,
+    "V":5,"X":10,"L":50,'C':100,"D":500,'M':1000
+}
+let str='XL'
+let Total=0
+for(i=0;i<str.length;i++)
+{
+  cur=roman[str[i]]
+  end=roman[str[i+1]]
+  if(cur<end)
+  {
+    Total-=cur
+  }else
+  {
+    
+  Total+=cur
+  }
+}        
         
+    console.log(Total)    
+     
         
 
 
