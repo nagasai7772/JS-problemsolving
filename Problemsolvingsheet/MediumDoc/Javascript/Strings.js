@@ -352,5 +352,43 @@ for(i=0;i<str.length;i++)
 console.log('The longest substring without repeating characters : '+ longest)
 console.log('The maxlength is :  '+maxlength)
 
+Check if Two Strings are Isomorphic
+
+Problem: Write a function to check if two strings are isomorphic (each character in one string can be mapped to a character in the other string, preserving order).
+Testcase 1:
+Input: "egg", "add"
+Output: true
+
+
+let str1 = 'egg';
+let str2 = 'add';
+let obj = {};
+if(str1.length!=str2.length)
+{
+  console.log('Not isomorphic')
+}
+else
+{
+  for(i=0;i<str1.length;i++)
+  {
+    ch=str1[i]
+    if(!(ch in obj))
+    {
+      obj[ch]=str2[i]
+    }
+    else
+    {
+      if(obj[ch]!=str2[i])
+      {
+        console.log('characters are mismatch')
+        return
+      }
+    }
+  }
+  console.log('both are isomorphic')
+}
+
+        
+        
 
 
