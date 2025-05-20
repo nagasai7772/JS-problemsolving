@@ -322,7 +322,35 @@ else
 
 
 
+// Find the Longest Substring Without Repeating Characters
 
+// Problem: Write a function to find the length of the longest substring without repeating characters.
+// Testcase 1:
+// Input: "abcabcbb"
+// Output: 3
+
+const str='abcabcbb'
+let obj={}
+let maxlength=0
+let start=0
+let longest=''
+for(i=0;i<str.length;i++)
+{
+  ch=str[i]
+  if(obj[ch]>=start)
+  {
+    start=obj[ch]+1
+  }
+  obj[ch]=i
+  if(i-start+1>maxlength)
+  {
+    maxlength=i-start+1
+    longest=str.slice(start,i+1)
+    
+  }
+}
+console.log('The longest substring without repeating characters : '+ longest)
+console.log('The maxlength is :  '+maxlength)
 
 
 
